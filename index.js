@@ -555,6 +555,15 @@ bot.launch()
     }
   });
 
+// Add port listener for Render
+const PORT = process.env.PORT || 3000;
+const http = require('http');
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Bot is running');
+});
+server.listen(PORT, () => console.log(`Dummy port active on ${PORT}`));
+
 // Enable graceful stop
 process.once('SIGINT', () => bot.stop('SIGINT'));
 process.once('SIGTERM', () => bot.stop('SIGTERM'));
