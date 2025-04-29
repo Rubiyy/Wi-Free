@@ -32,7 +32,7 @@ View detailed user information with /user <chat_id> command
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/wi-free-bot.git
+   git clone https://github.com/Rubiyy/wi-free-bot.git
    cd wi-free-bot
    ```
 
