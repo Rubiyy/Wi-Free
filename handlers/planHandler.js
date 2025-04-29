@@ -1368,7 +1368,7 @@ const helpHandler = async (ctx) => {
       `- 3 Days Unlimited (₦${PLAN_PRICES['3days-unlimited']})\n` +
       `- 7 Days Unlimited (₦${PLAN_PRICES['7days-unlimited']})\n\n` +
       
-      `For further assistance, please contact our support team.`;
+      `For further assistance, please contact our support team at https://wi.free.nf/.`;
     
     await ctx.replyWithMarkdown(helpMessage);
   } catch (error) {
