@@ -1,3 +1,7 @@
+// Add Express server setup at the top
+const express = require('express');
+const app = express();
+
 require('dotenv').config();
 const { Telegraf, Scenes, session } = require('telegraf');
 const connectDB = require('./db');
@@ -555,14 +559,15 @@ bot.launch()
     }
   });
 
-// Add port listener for Render
+// Add Express server at the bottom
 const PORT = process.env.PORT || 3000;
-const http = require('http');
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Bot is running');
+app.get('/', (req, res) => {
+  res.send('Bot is running');
 });
-server.listen(PORT, () => console.log(`Dummy port active on ${PORT}`));
+
+app.listen(PORT, () => {
+  console.log(`Dummy server running on port ${PORT}`);
+});
 
 // Enable graceful stop
 process.once('SIGINT', () => bot.stop('SIGINT'));
