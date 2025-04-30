@@ -88,7 +88,7 @@ const getPlanDetails = (planType) => {
       description: '7 days of freedom—stream, work, play!',
       data: 'Unlimited',
       duration: '7 Days',
-      speed: '40Mbps',
+      speed: '60Mbps',
       usage: 'Stream, download, and scroll all day',
       dependency: 'EEDC server dependency',
       price: 'N1000 / week',
