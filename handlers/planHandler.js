@@ -38,7 +38,7 @@ function getPlanDetails(planType) {
       name = '7 Days - Unlimited';
       description = '7 days of freedom—stream, work, play!';
       price = PLAN_PRICES[planType];
-      speed = '40Mbps';
+      speed = '60Mbps';
       usage = 'Stream, download, and scroll all day';
       dependency = 'EEDC server dependency';
       break;
